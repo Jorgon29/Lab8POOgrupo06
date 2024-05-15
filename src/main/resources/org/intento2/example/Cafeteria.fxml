@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="apnBaseCafeteria" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ff5a30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.intento2.example.CafeteriaController">
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <children>
+      <BorderPane id="bdpBase" layoutY="-4.0" prefHeight="728.0" prefWidth="1274.0">
+         <top>
+            <ImageView id="lblCrepeado" fitHeight="150.0" fitWidth="1274.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@logo.png" />
+               </image></ImageView>
+         </top>
+         <bottom>
+            <AnchorPane id="apnAbajo" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox id="hbAbajo" prefHeight="206.0" prefWidth="1274.0">
+                     <children>
+                        <Pane id="pnRadioButtons" prefHeight="206.0" prefWidth="640.0">
+                           <children>
+                              <HBox id="hbRadioButtons" layoutX="-1.0" layoutY="-3.0" prefHeight="210.0" prefWidth="640.0">
+                                 <children>
+                                    <Pane id="pnTipoCliente" prefHeight="210.0" prefWidth="325.0" style="-fx-background-color: #fccabd; -fx-background-radius: 25; -fx-background-insets: 10;">
+                                       <children>
+                                          <VBox id="vbTipoCliente" layoutY="5.0" prefHeight="200.0" prefWidth="320.0">
+                                             <children>
+                                                <VBox id="vbTipoCliente2" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <Label id="txtTipoCliente" alignment="CENTER" prefHeight="44.0" prefWidth="339.0" text="Tipo de cliente">
+                                                         <font>
+                                                            <Font size="36.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton id="rbtnEmpleado" fx:id="rbtnEmpleado" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onClickRbtnEmpleado" prefHeight="47.0" prefWidth="325.0" text="Empleado" textOverrun="WORD_ELLIPSIS">
+                                                         <font>
+                                                            <Font size="23.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </VBox.margin>
+                                                      </RadioButton>
+                                                      <RadioButton id="rbtnEstudiante" fx:id="rbtnEstudiante" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onClickRbtnEstudiante" prefHeight="47.0" prefWidth="325.0" text="Estudiante" textOverrun="WORD_ELLIPSIS">
+                                                         <font>
+                                                            <Font size="23.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </VBox.margin>
+                                                      </RadioButton>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="pnFormaPago" prefHeight="210.0" prefWidth="323.0" style="-fx-background-color: #fccabd; -fx-background-insets: 10; -fx-background-radius: 25;">
+                                       <children>
+                                          <VBox id="vbFormaPago" layoutX="6.0" layoutY="5.0" prefHeight="200.0" prefWidth="313.0">
+                                             <children>
+                                                <VBox id="vbFormaPago2" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <Label id="txtFormaPago" alignment="CENTER" prefHeight="44.0" prefWidth="339.0" text="Forma de pago">
+                                                         <font>
+                                                            <Font size="36.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton id="rbtnEfectivo" fx:id="rbtnEfectivo" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onClickRbtnEfectivo" prefHeight="47.0" prefWidth="325.0" text="Efectivo" textOverrun="WORD_ELLIPSIS">
+                                                         <font>
+                                                            <Font size="23.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </VBox.margin>
+                                                      </RadioButton>
+                                                      <RadioButton id="rbtnTarjeta" fx:id="rbtnTarjeta" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onClickRbtnTarjeta" prefHeight="47.0" prefWidth="325.0" text="Tarjeta" textOverrun="WORD_ELLIPSIS">
+                                                         <font>
+                                                            <Font size="23.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </VBox.margin>
+                                                      </RadioButton>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                        <Pane id="pnNombreTotal" prefHeight="206.0" prefWidth="635.0" style="-fx-background-color: #fccabd; -fx-background-radius: 25; -fx-background-insets: 10;">
+                           <children>
+                              <VBox id="vbNombreTotal" layoutX="14.0" layoutY="3.0" prefHeight="200.0" prefWidth="629.0">
+                                 <children>
+                                    <HBox id="hbNombreCliente" prefHeight="34.0" prefWidth="629.0">
+                                       <children>
+                                          <Label id="txtNombre" prefHeight="46.0" prefWidth="291.0" text="Nombre cliente: ">
+                                             <font>
+                                                <Font size="33.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextArea id="inpNombre" fx:id="inpNombre" prefHeight="20.0" prefWidth="279.0">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="hbTotal" prefHeight="53.0" prefWidth="629.0">
+                                       <children>
+                                          <Label id="txtTotal" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="54.0" prefWidth="291.0" text="Total: ">
+                                             <font>
+                                                <Font size="44.0" />
+                                             </font>
+                                          </Label>
+                                          <Label id="txtTotalInt" fx:id="txtTotalInt" contentDisplay="RIGHT" prefHeight="54.0" prefWidth="291.0" text="\$0.0">
+                                             <font>
+                                                <Font size="44.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="hbBotonesLimpiarComprar" prefHeight="73.0" prefWidth="629.0">
+                                       <children>
+                                          <Button id="btnLimpiar" fx:id="btnLimpiar" mnemonicParsing="false" onMouseClicked="#limpiar" prefHeight="57.0" prefWidth="270.0" text="Limpiar">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin></Button>
+                                          <Button id="btnComprar" contentDisplay="RIGHT" mnemonicParsing="false" onMouseClicked="#comprar" prefHeight="59.0" prefWidth="241.0" text="Comprar" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane id="apnCentral" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="121.0" prefWidth="1274.0" style="-fx-background-color: #fccabd; -fx-background-radius: 25; -fx-background-insets: 5;" styleClass="anpCentro" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane id="grdCentro" layoutY="6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="374.0" prefWidth="1274.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Pane id="pn00" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f7bc4f; -fx-background-radius: 25; -fx-background-insets: 10;">
+                           <children>
+                              <Label id="txtCrepeado" alignment="CENTER" layoutX="19.0" layoutY="14.0" prefHeight="40.0" prefWidth="600.0" text="Crepeado de papas con queso" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                              <HBox id="hbCrepeado" layoutX="14.0" layoutY="54.0" prefHeight="126.0" prefWidth="611.0">
+                                 <children>
+                                    <Pane id="pnCrepeadoIzq" prefHeight="126.0" prefWidth="354.0">
+                                       <children>
+                                          <VBox id="vbCrepeadoIzq" layoutX="-5.0" layoutY="-3.0" prefHeight="137.0" prefWidth="358.0">
+                                             <children>
+                                                <Pane id="pnCrepeadoIzq2" prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <VBox id="vbCrepeadoIzq2" layoutX="-3.0" layoutY="-4.0" prefHeight="147.0" prefWidth="363.0">
+                                                         <children>
+                                                            <Label id="txtCantCrepeado" alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="392.0" text="Cantidad: " textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font size="23.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Spinner id="spnCrepeado" fx:id="spnCrepeado" initialValue="0" max="100" min="0" onMouseClicked="#actualizarValores" prefHeight="24.0" prefWidth="372.0" />
+                                                            <Label id="txtSubtotalCrepeado" alignment="CENTER" prefHeight="16.0" prefWidth="385.0" text="Subtotal:">
+                                                               <font>
+                                                                  <Font size="21.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label id="txtCantCrepeadoInt" fx:id="txtCantCrepeadoInt" alignment="CENTER" prefHeight="34.0" prefWidth="373.0" text="\$0.0">
+                                                               <font>
+                                                                  <Font size="27.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="pnCrepeadoDer" prefHeight="126.0" prefWidth="262.0">
+                                       <children>
+                                          <VBox id="vbCrepeadoDer" layoutY="-4.0" prefHeight="135.0" prefWidth="263.0">
+                                             <children>
+                                                <ImageView id="imgCrepeado" fitHeight="90.0" fitWidth="265.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@capeado.jpg" />
+                                                   </image></ImageView>
+                                                <Label id="txtPrecioCrepeado" text="Precio: $1.25">
+                                                   <font>
+                                                      <Font size="28.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                        <Pane id="pn10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f7bc4f; -fx-background-insets: 10; -fx-background-radius: 25;" GridPane.columnIndex="1">
+                           <children>
+                              <Label id="txtCarne" alignment="CENTER" layoutX="125.0" layoutY="14.0" text="Carne de res deshilachada">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                              <VBox id="vbCarneDer" layoutX="14.0" layoutY="54.0" prefHeight="136.0" prefWidth="417.0">
+                                 <children>
+                                    <Label id="txtCantCarne" alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="392.0" text="Cantidad: " textAlignment="CENTER">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Label>
+                                    <Spinner id="spnCarne" fx:id="spnCarne" initialValue="0" max="100" min="0" onMouseClicked="#actualizarValores" prefHeight="24.0" prefWidth="372.0" />
+                                    <Label id="txtSubtotalCarne" alignment="CENTER" prefHeight="16.0" prefWidth="385.0" text="Subtotal:">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="txtSubtotalCarneInt" fx:id="txtCantCarneInt" alignment="CENTER" prefHeight="34.0" prefWidth="373.0" text="\$0.0">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox id="vbCarneDer" layoutX="386.0" layoutY="55.0" prefHeight="135.0" prefWidth="263.0">
+                                 <children>
+                                    <ImageView id="imgCarne" fitHeight="90.0" fitWidth="265.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@carne.jpg" />
+                                       </image></ImageView>
+                                    <Label id="txtPrecioCarne" text="Precio: $2.25">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane id="pn01" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f7bc4f; -fx-background-insets: 10; -fx-background-radius: 25;" GridPane.rowIndex="1">
+                           <children>
+                              <Label id="txtAlas" alignment="CENTER" layoutX="19.0" layoutY="14.0" prefHeight="40.0" prefWidth="600.0" text="Alas de pollo frito" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                              <VBox id="vbAlasIzq" layoutX="14.0" layoutY="54.0" prefHeight="136.0" prefWidth="349.0">
+                                 <children>
+                                    <Label id="txtCantAlas" alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="392.0" text="Cantidad: " textAlignment="CENTER">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Label>
+                                    <Spinner id="spnAlas" fx:id="spnAlas" initialValue="0" max="100" min="0" onMouseClicked="#actualizarValores" prefHeight="24.0" prefWidth="342.0" />
+                                    <Label id="txtSubtotalAlas" alignment="CENTER" prefHeight="16.0" prefWidth="385.0" text="Subtotal:">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="txtSubtotalAlasInt" fx:id="txtCantAlasInt" alignment="CENTER" prefHeight="34.0" prefWidth="373.0" text="\$0.0">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox id="vbAlasDer" layoutX="363.0" layoutY="49.0" prefHeight="72.0" prefWidth="265.0">
+                                 <children>
+                                    <ImageView id="imgAlas" fitHeight="93.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pollo.jpg" />
+                                       </image></ImageView>
+                                    <Label id="txtPrecioAlas" text="Precio: $1.75">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane id="pn11" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f7bc4f; -fx-background-insets: 10; -fx-background-radius: 25;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label id="txtVegetales" alignment="CENTER" layoutX="19.0" layoutY="14.0" prefHeight="40.0" prefWidth="600.0" text="Vegetales al ajillo" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                              <VBox id="vbVegetalesIzq" layoutX="14.0" layoutY="54.0" prefHeight="136.0" prefWidth="373.0">
+                                 <children>
+                                    <Label id="txtCantVegetales" alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="392.0" text="Cantidad: " textAlignment="CENTER">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Label>
+                                    <Spinner id="spnVegetales" fx:id="spnVegetales" initialValue="0" max="100" min="0" onMouseClicked="#actualizarValores" prefHeight="24.0" prefWidth="372.0" />
+                                    <Label id="txtSubtotalVegetales" alignment="CENTER" prefHeight="16.0" prefWidth="385.0" text="Subtotal:">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="txtSubtotalVegetalesInt" fx:id="txtCantVegetalesInt" alignment="CENTER" prefHeight="34.0" prefWidth="373.0" text="\$0.0">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox id="vbVegetalesDer" layoutX="387.0" layoutY="52.0" prefHeight="135.0" prefWidth="263.0">
+                                 <children>
+                                    <ImageView id="imgVegetales" fitHeight="91.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@vegetales.jpg" />
+                                       </image></ImageView>
+                                    <Label id="txtPrecioVegetales" text="Precio: $0.75">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
